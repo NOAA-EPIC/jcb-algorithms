@@ -35,7 +35,7 @@ observations:
 
 local ensemble DA:
   solver: {{local_ensemble_da_solver}}
-{% if local_ensemble_da_solver == 'GETKF' %}
+{% if local_ensemble_da_solver == 'Deterministic GETKF' %}
   vertical localization:
     fraction of retained variance: {{ vl_fraction_of_retained_variance | default(1.0, true) }}
     lengthscale: {{vl_lengthscale}}
